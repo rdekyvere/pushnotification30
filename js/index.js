@@ -64,6 +64,20 @@ var app = {
                 {
                     console.log("Regid " + e.regid);
                     alert('registration id = '+e.regid);
+                    //send to webserver
+                    // Create our XMLHttpRequest object
+                    var hr = new XMLHttpRequest();
+                    // Create some variables we need to send to our PHP file
+                    var url = "http://dlc.net46.net/saveRegId.php";
+                    var id = e.regid;
+                    var vars = "id="+id;
+                    hr.open("POST", url, true);
+                    // Set content type header information for sending url encoded variables in the request
+                    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    // Access the onreadystatechange event for the XMLHttpRequest object
+                    // Send the data to PHP now
+                    hr.send(vars); // Actually execute the request
+                    
                 }
                 break;
 
