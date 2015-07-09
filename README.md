@@ -1,4 +1,4 @@
 Push Notification on registered devices<br>
-Android
-Google Cloud Messaging GCM
+Android<br>
+Google Cloud Messaging GCM<br>
 PhoneGap Build
